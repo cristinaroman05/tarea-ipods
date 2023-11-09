@@ -1,0 +1,83 @@
+.card {
+    width: 455px;
+    height: 640px;
+    background-color: $color-secondary;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    margin: $spacing;
+    overflow: hidden;
+    font-family: monospace;
+
+    &__image{
+        width: 40%;
+        @include flexible;
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__body{
+        padding: $spacing;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    &__title{
+        @include flexible;
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    &__subtitle{
+        color: $color-primary;
+        font-weight: lighter;
+        margin: $spacing 0;
+        font-size: 28px;
+        
+    }
+
+    &__copy{
+        color: $color-thirst;
+        font-weight: lighter;
+    }
+
+    &__footer{
+        padding: $spacing;
+        @include flexible;
+    }
+
+    &__button{
+        color: $color-primary;
+        background-color:$color-secondary;
+        border: 1px solid $color-primary;
+        padding: 15px;
+        font-size: 12px;
+
+        &:hover{
+            background-color: $color-primary;
+            color: $color-secondary;   
+            }
+    }
+
+    &--reverse{
+        background-color: $color-primary;
+    .card__title, .card__subtitle{
+         color: $color-secondary;
+        }
+
+    .card__button{
+        color:  $color-secondary;
+        background-color: $color-primary;
+        border: 1px solid $color-secondary;
+
+    &:hover{
+        background-color: $color-secondary;
+        color: $color-primary;
+            }
+        }
+    }
+}
